@@ -1,0 +1,45 @@
+<html>
+<body>
+<div class="container-fluid vertical-center">
+  <div class="container-lg p-3 my-3 bg-light text-dark w-25">
+    <h2>Login </h2>
+    <p></p>
+    <form action="/action_page.php">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input id="username"
+               type="username"
+               [(ngModel)]="username"
+               name="username"
+               placeholder="Username"
+               required="required"
+               class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input id="password"
+               type="password"
+               [(ngModel)]="password"
+               name="password"
+               placeholder="Password"
+               required="required"
+               class="form-control">
+      </div>
+
+      <div class="text-right">
+        <button class="btn btn-primary btn " type="submit" (click)="login()">Log in</button>
+      </div>
+
+    </form>
+    <br/>
+    <br/>
+    <div class="font-italic">
+      <p>Don't have an account ?</p>
+    </div>
+    <div class="btn-link">
+      <a routerLink="/user/add" routerLinkActive="active">Create account</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

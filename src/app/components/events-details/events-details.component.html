@@ -1,0 +1,67 @@
+<div class="container-fluid vertical-center">
+  <div class="container-md bg-light text-dark w-75">
+    <h2>View Event </h2>
+    <p></p>
+    <form id="addEventForm">
+      <div class="form-group form-inline d-flex " >
+        <label style="width: 40%;text-align: left" for="eventName">Event Name:</label>
+        <label id="eventName"
+               style="width: 60%"
+               [(ngModel)]="eventName"
+               name="eventName"
+               class="form-control">{{ eventName }}</label>
+      </div>
+      <div class="form-group form-inline d-flex " >
+        <label style="width: 40%;text-align: left" for="eventCategory">Category:</label>
+        <label id="eventCategory"
+               style="width: 60%"
+               [(ngModel)]="eventCategory"
+               name="eventCategory"
+               class="form-control">{{eventCategory}}</label>
+      </div>
+      <div class="form-group form-inline d-flex " >
+        <label style="width: 40%;text-align: left" for="eventPlace">Place:</label>
+        <label id="eventPlace"
+               style="width: 60%"
+               [(ngModel)]="eventPlace"
+               name="eventPlace"
+               class="form-control">{{eventPlace}}</label>
+
+      </div>
+      <div class="form-group form-inline d-flex " >
+        <label style="width: 40%;text-align: left" for="eventAddress">Address:</label>
+        <label id="eventAddress"
+               style="width: 60%"
+               [(ngModel)]="eventAddress"
+               name="eventPlace"
+               class="form-control">{{eventAddress}}</label>
+      </div>
+      <div class="form-group form-inline d-flex " >
+        <label style="width: 40%;text-align: left" for="eventInitialDate">Event Initial Date:</label>
+        <label id="eventInitialDate"
+               style="width: 60%"
+               [(ngModel)]="eventInitialDate"
+               name="eventInitialDate"
+               class="form-control">{{eventInitialDate}}</label>
+      </div>
+      <div class="form-group form-inline d-flex " >
+        <label style="width: 40%;text-align: left" for="eventFinalDate">Event Final Date:</label>
+        <label id="eventFinalDate" [(ngModel)]="eventFinalDate">{{eventFinalDate}}</label>
+      </div>
+      <div class="form-group form-inline d-flex " >
+        <label style="width: 40%;text-align: left" for="eventType">Event Type:</label>
+        <label id="eventType" [(ngModel)]="eventType">{{eventType}}</label>
+      </div>
+      <div class="form-group form-inline d-flex " >
+        <label style="width: 40%;text-align: left" for="eventThumbnail">Event Thumbnail:</label>
+        <label id="eventThumbnail" [(ngModel)]="eventThumbnail">{{eventThumbnail}}</label>
+      </div>
+      <div class="btn-group w-100 ">
+        <button class="btn btn-primary btn-success" (click)="backToEventList()" type="button">Back to list
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
+

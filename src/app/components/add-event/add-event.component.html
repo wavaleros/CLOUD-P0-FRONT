@@ -1,0 +1,92 @@
+<html>
+<body>
+<div class="container-fluid vertical-center">
+  <div class="container-md bg-light text-dark w-75">
+    <h2>New Event </h2>
+    <p></p>
+    <form id="addEventForm">
+      <div class="form-group form-inline d-flex justify-content-start">
+        <label style="width: 40%;text-align: left" for="eventName">Event Name:</label>
+        <input id="eventName"
+               style="width: 60%"
+               [(ngModel)]="eventName"
+               name="eventName"
+               placeholder="Event name"
+               required="required"
+               class="form-control">
+      </div>
+      <div class="form-group form-inline d-flex justify-content-start">
+        <label style="width: 40%;text-align: left" for="eventCategory">Category:</label>
+        <select id="eventCategory" formControlName="eventCategory" class="form-control">
+          <option disabled>Select the category of the event</option>
+          <option *ngFor="let type of eventCategoryList">{{type}}</option>
+        </select>
+      </div>
+      <div class="form-group form-inline d-flex justify-content-start">
+        <label style="width: 40%;text-align: left" for="eventPlace">Place:</label>
+        <input id="eventPlace"
+               style="width: 60%"
+               [(ngModel)]="eventPlace"
+               name="eventPlace"
+               placeholder="Place"
+               required="required"
+               class="form-control">
+      </div>
+      <div class="form-group form-inline d-flex justify-content-start">
+        <label style="width: 40%;text-align: left" for="eventAddress">Address:</label>
+        <input id="eventAddress"
+               style="width: 60%"
+               [(ngModel)]="eventAddress"
+               name="eventAddress"
+               placeholder="Event Address"
+               required="required"
+               class="form-control">
+      </div>
+      <div class="form-group form-inline d-flex justify-content-sm-around">
+        <label style="width: 40%;text-align: left" for="eventInitialDate">Event Initial Date:</label>
+        <input class="mat-calendar" id="eventInitialDate" style="width: 30%" placeholder="yyyy-mm-dd"
+               name="dp" [(ngModel)]="eventInitialDate" ngbDatepicker #d="ngbDatepicker">
+        <div class="input-group-append h-100">
+          <button class="btn btn-secondary" (click)="d.toggle()" type="button"></button>
+        </div>
+        <input id="eventInitialDateHour"
+               style="width: 20%"
+               [(ngModel)]="eventInitialDateHour"
+               name="eventInitialDateHour"
+               placeholder="HH:MM"
+               required="required"
+               class="form-control">
+      </div>
+      <div class="form-group form-inline d-flex justify-content-sm-around">
+        <label style="width: 40%;text-align: left" for="eventFinalDate">Event Final Date:</label>
+        <input class="mat-calendar" id="eventFinalDate" style="width: 30%" placeholder="yyyy-mm-dd"
+               name="dp" [(ngModel)]="eventFinalDate" ngbDatepicker #d2="ngbDatepicker">
+        <div class="input-group-append h-100">
+          <button class="btn btn-secondary" (click)="d2.toggle()" type="button"></button>
+        </div>
+        <input id="eventFinalDateHour"
+               style="width: 20%"
+               [(ngModel)]="eventFinalDateHour"
+               name="eventFinalDateHour"
+               placeholder="HH:MM"
+               required="required"
+               class="form-control">
+      </div>
+
+      <div class="form-group form-inline d-flex justify-content-start position-static">
+        <label style="width: 40%;text-align: left" for="eventType">Event Type:</label>
+        <select id="eventType" formControlName="eventType" class="form-control">
+          <option disabled>Select the type of the event</option>
+          <option *ngFor="let type of eventTypeList">{{type}}</option>
+        </select>
+
+      </div>
+      <div class="btn-group w-100 ">
+        <button class="btn btn-primary btn-success" (click)="createEvent()" type="button">Add</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+</body>
+</html>

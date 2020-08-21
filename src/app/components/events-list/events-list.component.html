@@ -1,0 +1,42 @@
+<html>
+<body>
+<div class="container-fluid vertical-center">
+  <div class="container text-dark w-100">
+
+    <div class="table table-responsive w-100 table-striped ">
+      <h2>Events list</h2>
+      <div class="text-left">
+        <button class="btn btn-success" type="submit" (click)="addNewEvent()">Add</button>
+      </div>
+      <table class="w-100 table-bordered border-dark ">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Address</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th style="width: 20%">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of eventList">
+          <td hidden=true>{{ item.id }}</td>
+          <td>{{ item.event_name }}</td>
+          <td>{{ item.event_place }}</td>
+          <td>{{ item.event_address }}</td>
+          <td>{{ item.event_initial_date.split('T')[0]}}</td>
+          <td>{{ item.event_final_date.split('T')[0]}}</td>
+          <td class="col-1 w-auto">
+            <button class="btn btn-primary" type="button" (click)="viewEventDetails(item.id)">View</button>
+            <button class="btn btn-secondary" type="button">Edit</button>
+            <button class="btn btn-danger" type="button" (click)="deleteEvent(item.id)">Delete</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>
