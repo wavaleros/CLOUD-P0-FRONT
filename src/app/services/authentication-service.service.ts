@@ -30,6 +30,7 @@ export class AuthenticationService {
         localStorage.removeItem(Constants.REFRESH);
         localStorage.setItem(Constants.ACCESS, userObj.access);
         localStorage.setItem(Constants.REFRESH, userObj.refresh);
+        localStorage.setItem(Constants.CURRENT_USER, JSON.stringify(userObj));
         this.currentUserSubject.next(userObj);
         return data;
       }));
