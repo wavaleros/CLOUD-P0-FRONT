@@ -11,7 +11,7 @@ import {EventsDetailsComponent} from './components/events-details/events-details
 
 const routes: Routes = [
   {path: Paths.LOGIN, component: LoginComponent},
-  {path: Paths.ADD_USER, component: AddUserComponent, canActivate: [AuthGuardService]},
+  {path: Paths.ADD_USER, component: AddUserComponent},
   {path: Paths.EVENT_LIST, component: EventsListComponent, canActivate: [AuthGuardService]},
   {path: Paths.VIEW_EVENT, component: EventsDetailsComponent, canActivate: [AuthGuardService]},
   {path: Paths.ADD_EVENT, component: AddEventComponent, canActivate: [AuthGuardService]}
