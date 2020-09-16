@@ -16,6 +16,7 @@ import {AddUserComponent} from './components/add-user/add-user.component';
 import {JwtInterceptor} from './interceptors/jwt-interceptor.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { UpdateEventComponent } from './components/update-event/update-event.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     EventsListComponent,
     LoginComponent,
     UsersComponent,
-    AddUserComponent
+    AddUserComponent,
+    UpdateEventComponent
   ],
   imports: [
     BrowserModule,

@@ -29,7 +29,7 @@
           <td>{{ item.event_final_date.split('T')[0]}}</td>
           <td class="col-1 w-auto">
             <button class="btn btn-primary" type="button" (click)="viewEventDetails(item.id)">View</button>
-            <button class="btn btn-secondary" type="button">Edit</button>
+            <button class="btn btn-secondary" type="button" (click)="editEvent(item.id)"> Edit</button>
             <button class="btn btn-danger" type="button" (click)="deleteEvent(item.id)">Delete</button>
           </td>
         </tr>

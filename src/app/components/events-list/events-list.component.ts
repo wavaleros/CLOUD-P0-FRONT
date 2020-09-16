@@ -45,4 +45,8 @@ export class EventsListComponent implements OnInit {
       this.ngOnInit();
     });
   }
+
+  editEvent(id: string): void {
+    this.router.navigateByUrl(Paths.UPDATE_EVENT.replace(':id', id), {state: {id}}).then();
+  }
 }

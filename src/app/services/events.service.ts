@@ -30,4 +30,9 @@ export class EventsService {
   deleteEvent(id: string): any {
     return this.http.delete(Constants.API_URL + Constants.GET_EVENT + id, this.httpOptions);
   }
+
+  updateEvent(eventDetail: any): any {
+    return this.http.put(Constants.API_URL + Constants.GET_EVENT + eventDetail.id, eventDetail, this.httpOptions);
+
+  }
 }

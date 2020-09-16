@@ -7,6 +7,7 @@ import {AddUserComponent} from './components/add-user/add-user.component';
 import {AuthGuardService} from './services/auth-guard.service';
 import * as Paths from './app.paths';
 import {EventsDetailsComponent} from './components/events-details/events-details.component';
+import {UpdateEventComponent} from './components/update-event/update-event.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,9 @@ const routes: Routes = [
   {path: Paths.ADD_USER, component: AddUserComponent},
   {path: Paths.EVENT_LIST, component: EventsListComponent, canActivate: [AuthGuardService]},
   {path: Paths.VIEW_EVENT, component: EventsDetailsComponent, canActivate: [AuthGuardService]},
-  {path: Paths.ADD_EVENT, component: AddEventComponent, canActivate: [AuthGuardService]}
+  {path: Paths.ADD_EVENT, component: AddEventComponent, canActivate: [AuthGuardService]},
+  {path: Paths.UPDATE_EVENT, component: UpdateEventComponent, canActivate: [AuthGuardService]},
+
 ];
 
 @NgModule({
